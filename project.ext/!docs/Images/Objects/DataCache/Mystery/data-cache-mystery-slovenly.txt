@@ -1,0 +1,6 @@
+Why it is slovenly:
+at first glance, it is definitely visible that two objects or shapes are located asymmetrically relative to the center of the image coordinate system:
+the outer object (white) contains an inner/child object (blue), and their centers of location do not coincide from the perspective point of view;
+
+Therefore, the part of the inner object/shape in the upper right corner is discarded, since this part makes the aforementioned discrepancy noticeable
+(the original image can be viewed in the psd file as a locked layer);
