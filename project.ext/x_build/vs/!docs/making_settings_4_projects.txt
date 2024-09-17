@@ -1,0 +1,15 @@
+these URLs may help to configure project file(s):
+
+https://learn.microsoft.com/en-us/cpp/build/reference/property-page-xml-files ;
+https://learn.microsoft.com/en-us/cpp/build/reference/vcxproj-files-and-wildcards ;
+https://learn.microsoft.com/en-us/cpp/build/reference/vcxproj-file-structure ;
+
+*important*
+taking into account that all project related files are created manually (files of all projects, filters and properties in this solution),
+there is some trick preventing to start a work with new project files in VS code explorer properly:
+	!!! do not forget !!!! to specify required property page file name in project file, otherwise there is a lot of time will be spent for nothing;
+
+*VS*
+https://stackoverflow.com/questions/5809245/completely-remove-error-list-from-visual-studio ;
+https://stackoverflow.com/questions/2466286/vs2010-how-to-remove-hide-the-external-dependencies-folder-in-solution-explor ;
+https://stackoverflow.com/questions/7883966/disabling-highlighting-of-current-line-in-visual-studio  ;

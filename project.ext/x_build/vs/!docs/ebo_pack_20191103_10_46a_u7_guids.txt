@@ -1,0 +1,235 @@
+Ebo Pack
+-----------------------------------------------------------------------------
+proj           | guid
+-----------------------------------------------------------------------------
+__shared       : {00000C13-EEEE-BBBB-6667-000000000001}  [stroke_over prj >> confirmed]
+	sys.err.core : {00000C13-EEEE-BBBB-6667-00000000A101}
+	sys.com.core : {00000C13-EEEE-BBBB-6667-00000000A201}
+	sys.mem.core : {00000C13-EEEE-BBBB-6667-00000000A301}
+	unit test(s) :
+		ebo_test_$$$ : {00000C13-EEEE-BBBB-6667-C00000060000} >> shared/common lib;
+		ebo_test_$0$ : {00000C13-EEEE-BBBB-6667-000000060001} >> shared base iface;
+		ebo_test_$1$ : {00000C13-EEEE-BBBB-6667-00000006A101} >> shared error ; 
+		ebo_test_$2$ : {00000C13-EEEE-BBBB-6667-00000006A201} >> shared com-base  ;
+		ebo_test_$3$ : {00000C13-EEEE-BBBB-6667-00000006A301} >> shared mem-base  ;
+draw libs:
+	color  : {00000C13-EEEE-BBBB-6667-000000000022} >> draw color lib;
+	unit test(s) :
+		ebo_test_$4$ : {00000C13-EEEE-BBBB-6667-000000060022} >> draw color ;
+	
+
+_console       : {00000C13-EEEE-BBBB-6667-000000000020}  [stroke_over prj >> confirmed] !!; not created yet!
+	unit test(s) :
+		ebo_test_con : {00000C13-EEEE-BBBB-6667-000000060020} >> shared/common exe;
+
+_crypto        : {00000C13-EEEE-BBBB-6667-000000000002}
+_log           : {00000C13-EEEE-BBBB-6667-000000000003}
+_net           : {00000C13-EEEE-BBBB-6667-000000000004}
+_ntfs          : {00000C13-EEEE-BBBB-6667-000000000005}
+_registry      : {00000C13-EEEE-BBBB-6667-000000000006}
+_runnable      : {00000C13-EEEE-BBBB-6667-000000000007}
+_user.32       : {00000C13-EEEE-BBBB-6667-000000000008}
+_xml           : {00000C13-EEEE-BBBB-6667-000000000009}
+_uix.draw      : {00000C13-EEEE-BBBB-6667-00000000000A}
+_uix.ctrl      : {00000C13-EEEE-BBBB-6667-00000000000B}
+_uix.form      : {00000C13-EEEE-BBBB-6667-00000000000C}
+_wmi.service   : {00000C13-EEEE-BBBB-6667-00000000000D}
+_web           : {00000C13-EEEE-BBBB-6667-00000000000E}
+_generic.stg   : {00000C13-EEEE-BBBB-6667-00000000000F}
+_generic.sql   : {00000C13-EEEE-BBBB-6667-000000000010}
+_usb           : {00000C13-EEEE-BBBB-6667-000000000011}
+_uix.help      : {00000C13-EEEE-BBBB-6667-000000000012}
+_uix.flex      : {00000C13-EEEE-BBBB-6667-000000000013}
+_uix.flex.prv  : {00000C13-EEEE-BBBB-6667-B00000000013}
+_uix.trace     : {00000C13-EEEE-BBBB-6667-000000000014}
+_process       : {00000C13-EEEE-BBBB-6667-000000000015}
+_svc.man       : {00000C13-EEEE-BBBB-6667-000000000016}
+_security      : {00000C13-EEEE-BBBB-6667-000000000017}
+_java          : {00000C13-EEEE-BBBB-6667-000000000018}
+_uix.color     : {00000C13-EEEE-BBBB-6667-000000000019}
+
+ctrl.common.w32: {00000C13-EEEE-BBBB-6667-0000000B000A}
+
+uix.libs.test  : {00000C13-EEEE-BBBB-6667-000000060001}
+uix.wnd.adapt  : {00000C13-EEEE-BBBB-6667-000000060002}
+uix.wnd.popup  : {00000C13-EEEE-BBBB-6667-000000060003}
+
+uixframe       : {00000C13-EEEE-BBBB-6667-000000060005}
+
+uix.prop       : {00000C13-EEEE-BBBB-6667-000000303030}
+uix.format     : {00000C13-EEEE-BBBB-6667-000000303031}
+uix.layout     : {00000C13-EEEE-BBBB-6667-000000303032}
+
+SFX._prev
+-----------------------------------------------------------------------------
+proj           | guid
+-----------------------------------------------------------------------------
+SfxHotKey      : {00000C13-EEEE-BBBB-6667-0000003A0001}
+
+STControl      : {00000C13-EEEE-BBBB-6667-0000004A000E}
+
+STMenuBar      : {00000C13-EEEE-BBBB-6667-0000006A000E}
+STMenuWnd      : {00000C13-EEEE-BBBB-6667-000000AA000E}
+
+SFX
+-----------------------------------------------------------------------------
+proj           | guid
+-----------------------------------------------------------------------------
+base:
+ComCore_v1*    : {00000C13-EEEE-BBBB-6667-000000030001}
+System_v1*     : {00000C13-EEEE-BBBB-6667-000000030002}
+XmlCore_v1*    : {00000C13-EEEE-BBBB-6667-000000030003}
+sfx.svc.test*  : {00000C13-EEEE-BBBB-6667-000000030004}
+
+common:
+_sfx.tips      : {00000C13-EEEE-BBBB-6667-000000030005}
+_sfx.schema    : {00000C13-EEEE-BBBB-6667-000000030006}
+
+client:
+UIDrawing      : {00000C13-EEEE-BBBB-6667-000000030007}
+
+controls:
+_sfx.image     : {00000C13-EEEE-BBBB-6667-000000030008}
+_sfx.button    : {00000C13-EEEE-BBBB-6667-000000030009}
+_sfx.popup     : {00000C13-EEEE-BBBB-6667-00000003000A}
+_sfx.color     : {00000C13-EEEE-BBBB-6667-00000003000B}
+
+_sfx.scroll    : {00000C13-EEEE-BBBB-6667-00000003000C}
+
+_sfx.status    : {00000C13-EEEE-BBBB-6667-00000003000D}
+_sfx.tabs      : {00000C13-EEEE-BBBB-6667-00000003000E}
+_sfx.meta      : {00000C13-EEEE-BBBB-6667-00000003000F}
+_sfx.theme     : {00000C13-EEEE-BBBB-6667-000000030010}
+_sfx.hook      : {00000C13-EEEE-BBBB-6667-000000030011}
+_sfx.select    : {00000C13-EEEE-BBBB-6667-000000030012}
+_sfx.strip     : {00000C13-EEEE-BBBB-6667-000000030013}
+_sfx.combo     : {00000C13-EEEE-BBBB-6667-000000030014}
+_sfx.label     : {00000C13-EEEE-BBBB-6667-000000030015}
+
+Ebo Pack Tests
+-----------------------------------------------------------------------------
+proj           | guid
+-----------------------------------------------------------------------------
+test.shared    : {00000C13-EEEE-BBBB-6667-000000010000}
+test.stdlib    : {00000C13-EEEE-BBBB-6667-000000010001}
+
+deprecated:
+
+test.1.wmi     : {00000C13-EEEE-BBBB-6667-000000010001}
+test.2.net     : {00000C13-EEEE-BBBB-6667-000000010002}
+test.3.csv     : {00000C13-EEEE-BBBB-6667-000000010003}
+test.4.sql     : {00000C13-EEEE-BBBB-6667-000000010004}
+test.5.stg.sql : {00000C13-EEEE-BBBB-6667-000000010005}
+test.6.stg.prf : {00000C13-EEEE-BBBB-6667-000000010006}
+test.7.gen.xml : {00000C13-EEEE-BBBB-6667-000000010007}
+test.u.uix.trc : {00000C13-EEEE-BBBB-6667-000000010028}
+test.w.uix.grd : {00000C13-EEEE-BBBB-6667-000000010029}
+test.x.uix.bkg : {00000C13-EEEE-BBBB-6667-000000010030}
+test.y.uix.hlp : {00000C13-EEEE-BBBB-6667-000000010031}
+test.z.uix.ctl : {00000C13-EEEE-BBBB-6667-000000010032}
+theme.frame    : {00000C13-EEEE-BBBB-6667-000000010033}
+
+Ebo Pack 3rd Party
+-----------------------------------------------------------------------------
+proj           | guid
+-----------------------------------------------------------------------------
+lib.mcrypt     : {00000C13-EEEE-BBBB-6667-000000110001}
+lib.sqlite     : {00000C13-EEEE-BBBB-6667-000000110002}
+lib.sqlite.ext : {00000C13-EEEE-BBBB-6667-000000110003}
+zlib           : {00000C13-EEEE-BBBB-6667-000000110004}
+mem.module.v14 : {00000C13-EEEE-BBBB-6667-000000110005}
+
+Ebo Drv
+-----------------------------------------------------------------------------
+proj           | guid
+-----------------------------------------------------------------------------
+ebo.drv.low    : {00000C13-EEEE-BBBB-6667-0000001D0001}
+ebo.tst.con    : {00000C13-EEEE-BBBB-6667-0000001D0002}
+ebo.com.sha    : {00000C13-EEEE-BBBB-6667-0000001D0003}
+ebo.vac.drv    : {00000C13-EEEE-BBBB-6667-0000001D0004}
+ebo.ann.drv    : {00000C13-EEEE-BBBB-6667-0000001D0005}
+ebo.fs.drv     : {00000C13-EEEE-BBBB-6667-0000001D0006}
+ebo.vac.cli    : {00000C13-EEEE-BBBB-6667-0000001D0007}
+ebo.wav.drv    : {00000C13-EEEE-BBBB-6667-0000001D0008}
+
+Ebo Boo
+-----------------------------------------------------------------------------
+proj           | guid
+-----------------------------------------------------------------------------
+ebo.boo.app    : {00000C13-EEEE-BBBB-6667-000000001017}
+ebo.boo.stg    : {00000C13-EEEE-BBBB-6667-000000001018}
+ebo.boo.rpt    : {00000C13-EEEE-BBBB-6667-000000001019}
+
+Ebo Xor
+-----------------------------------------------------------------------------
+proj           | guid
+-----------------------------------------------------------------------------
+ebo.xor.app    : {00000C13-EEEE-BBBB-6667-000000002001}
+
+Fake GPS
+-----------------------------------------------------------------------------
+proj           | guid                                   | notes     |
+-----------------------------------------------------------------------------
+clone          : {00000C13-EEEE-BBBB-6667-0000001D0005} | deprecated;
+UMDF2          : {00000C13-EEEE-BBBB-6667-0000001D0005} | active    ;
+cmd            : {00000C13-EEEE-BBBB-6667-0000001D0013}
+con.client     : {00000C13-EEEE-BBBB-6667-0000001D0004} | cplusplus ;
+pps            : {00000C13-EEEE-BBBB-6667-0000001D0008}
+tcp            : {00000C13-EEEE-BBBB-6667-0000001D0003} | deprecated;
+wpf.client     : {00000C13-EEEE-BBBB-6667-0000001D0007}
+gen            : {00000C13-EEEE-BBBB-6667-0000001D0006}
+geo.api        : {00000C13-EEEE-BBBB-6667-0000001D0009}
+dat            : {00000C13-EEEE-BBBB-6667-0000001D000A}
+dev            : {00000C13-EEEE-BBBB-6667-0000001D000B}
+gui.shared     : {00000C13-EEEE-BBBB-6667-0000001D000C} | cplusplus ;
+setup          : {00000C13-EEEE-BBBB-6667-0000001D000E}
+gui.client.ebo : {00000C13-EEEE-BBBB-6667-000000001021} | cplusplus ;
+connect        : {00000C13-EEEE-BBBB-6667-0000001D0003} | taken from tcp project that is deprecated in this project;
+
+Hid Man
+-----------------------------------------------------------------------------
+proj           | guid
+-----------------------------------------------------------------------------
+target.con     : {00000C13-EEEE-BBBB-6667-0000001D0010}
+con.inject     : {00000C13-EEEE-BBBB-6667-0000001D0011}
+hook.dyna      : {00000C13-EEEE-BBBB-6667-000000001034}
+hook.lib       : {00000C13-EEEE-BBBB-6667-000000001036}
+ebo.hid.man    : {00000C13-EEEE-BBBB-6667-0000001D0040}
+ebo.hid.svc    : {00000C13-EEEE-BBBB-6667-0000001D0041}
+ebo.hid.shared : {00000C13-EEEE-BBBB-6667-0000001D0042}
+
+SSH Man
+-----------------------------------------------------------------------------
+proj           | guid
+-----------------------------------------------------------------------------
+ssh.con        : {00000C13-EEEE-BBBB-6667-0000001D0020}
+ssh.cli        : {00000C13-EEEE-BBBB-6667-0000001D0021}
+ssh.tnl.drv    : {00000C13-EEEE-BBBB-6667-0000001D0022}
+ssh.tnl.lib    : {00000C13-EEEE-BBBB-6667-0000001D0023}
+drv.lite.legacy: {00000C13-EEEE-BBBB-6667-0000001D0024}
+
+Ebo Bot
+-----------------------------------------------------------------------------
+proj           | guid
+-----------------------------------------------------------------------------
+ebo.bot.data   : {00000C13-EEEE-BBBB-6667-000000004000}
+ebo.bot.test.0 : {00000C13-EEEE-BBBB-6667-000000004001}
+ebo.bot.test.1 : {00000C13-EEEE-BBBB-6667-000000004002}
+ebo.bot.test.2 : {00000C13-EEEE-BBBB-6667-000000004003}
+ebo.bot.test.3 : {00000C13-EEEE-BBBB-6667-000000004004}
+
+Ebo Sha
+-----------------------------------------------------------------------------
+proj           | guid
+-----------------------------------------------------------------------------
+ebo.sha.gui    : {00000C13-EEEE-BBBB-6667-000000003001}
+ebo.bio.iface  : {00000C13-EEEE-BBBB-6667-000000003002}
+chart.draw     : {00000C13-EEEE-BBBB-6667-000000003003}
+
+The Obfu
+-----------------------------------------------------------------------------
+proj           | guid
+-----------------------------------------------------------------------------
+obfuscator     : {00000C13-EEEE-BBBB-6667-000000005000}
+cust_installer : {00000C13-EEEE-BBBB-6667-000000005001}
+
