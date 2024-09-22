@@ -13,7 +13,8 @@
 namespace ex_ui { namespace color { namespace rgb {
 
 	using TPercent = TPct_Flt;
-
+	// perhaps it would be better to consider RGBQUAD as the base for this class:
+	// https://learn.microsoft.com/en-us/windows/win32/api/wingdi/ns-wingdi-rgbquad ;
 	class CQuad {
 	public:
 		enum channel : uint32_t { // strictly speaking, alpha value is not an rgb color channel, but just a transparency value;

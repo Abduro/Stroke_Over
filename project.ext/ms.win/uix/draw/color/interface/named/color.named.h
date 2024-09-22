@@ -8,7 +8,7 @@
 #include "color.rgb.h"
 
 namespace ex_ui { namespace color { namespace rgb {
-
+	// https://en.wikipedia.org/wiki/Lists_of_colors ;
 	class CNamed {
 	public:
 		 CNamed (void);

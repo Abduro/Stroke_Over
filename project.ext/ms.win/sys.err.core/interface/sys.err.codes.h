@@ -8,25 +8,43 @@
 */
 #include <winerror.h>  // h_result definition is kept for this version of the implementation;
 
-#ifndef __DwordToHresult
-#define __DwordToHresult(_dword) HRESULT_FROM_WIN32(_dword)
+#pragma region _err_code_defs
+// making things a little bit inconspicuous;
+#ifndef __e_aborted
+#define __e_aborted E_ABORT
 #endif
-#ifndef __e_no_memory
-#define __e_no_memory E_OUTOFMEMORY
+#ifndef __e_fail
+#define __e_fail E_FAIL
 #endif
 #ifndef __e_invalid_arg
 #define __e_invalid_arg E_INVALIDARG
 #define __e_inv_arg   __e_invalid_arg
 #endif
+#ifndef __e_no_memory
+#define __e_no_memory E_OUTOFMEMORY
+#endif
+#ifndef __e_not_impl
+#define __e_not_impl E_NOTIMPL
+#endif
+#ifndef __e_not_inited
+#define __e_not_inited OLE_E_BLANK
+#endif
 
+#pragma endregion
+
+// hresult & error code conversions to each other;
+#ifndef __DwordToHresult
+#define __DwordToHresult(_dword) HRESULT_FROM_WIN32(_dword)
+#endif
 #define __HresultToDword(_hres) (_hres & 0x0000FFFF)
 #define __LastErrToHresult()   __DwordToHresult(::GetLastError())
+// tries to analyze what result is being gotten;
 #define __is_okay(_hresult)     (S_OK == _hresult)     // warning C4005: '__success': macro redefinition, specstrings_strict.h(620);
 #define __succeeded(_hresult)   (SUCCEEDED(_hresult))
 #define __failed(_hresult)      (FAILED(_hresult))
 
 namespace shared { namespace sys_core {
-
+	// https://en.wikipedia.org/wiki/HRESULT ;
 	typedef HRESULT err_code;
 	// https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/18d8fbe8-a967-4f1c-ae50-99ca8e491d2d ;
 	// https://learn.microsoft.com/en-us/windows/win32/debug/system-error-codes--0-499- ;
@@ -64,17 +82,23 @@ namespace shared { namespace sys_core {
 			eFunction  = __DwordToHresult(ERROR_INVALID_FUNCTION)       , // Incorrect function.
 			eEnviron   = __DwordToHresult(ERROR_BAD_ENVIRONMENT)        , // The environment is incorrect.
 			eInternal  = __DwordToHresult(ERROR_INTERNAL_ERROR)         , // An internal error occurred.
+			eOverflow  = __DwordToHresult(ERROR_ARITHMETIC_OVERFLOW)    , // Arithmetic result exceeded 32 bits.
 			eParamerer = __DwordToHresult(ERROR_INVALID_PARAMETER)      , // The parameter is incorrect.
 			eState     = __DwordToHresult(ERROR_INVALID_STATE)          , // The group or resource is not in the correct state to perform the requested operation.
+		};};
+		struct eFont   { enum _value : err_code {
+			eNoFamily  =   DWRITE_E_NOFONT        , // Indicates the specified font does not exist.
+			eNoStyle   =   eData::eUnsupport      , // gdi+, one of the functions throws such a kind of the error;
+			eTrueType  =   eData::eMismatch       , // gdi+, not true type font;
 		};};
 		struct eMemory { enum _value : err_code {
 			NotEnough  = __DwordToHresult(ERROR_NOT_ENOUGH_MEMORY)      , // Not enough storage is available to process this command.
 		};};
 		struct eObject { enum _value : err_code {
+			eBusy      = __DwordToHresult(ERROR_BUSY)                   , // The requested resource is in use.
 			eExists    = __DwordToHresult(ERROR_OBJECT_ALREADY_EXISTS)  , // The object already exists.
 			eHandle    = __DwordToHresult(ERROR_INVALID_HANDLE)         , // The handle is invalid.
-			eInited    = __DwordToHresult(ERROR_ALREADY_INITIALIZED)    , // An attempt was made to perform an initialization operation
-			                                                              // when initialization has already been completed.
+			eInited    = __DwordToHresult(ERROR_ALREADY_INITIALIZED)    , // An attempt was made to perform an initialization operation that has already been completed.
 			eNotFound  = __DwordToHresult(ERROR_OBJECT_NOT_FOUND)       , // The object identifier does not represent a valid object.
 			eProperty  = __DwordToHresult(ERROR_UNKNOWN_PROPERTY)       , // Unknown property.
 		};};

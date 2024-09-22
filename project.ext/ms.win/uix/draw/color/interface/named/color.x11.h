@@ -14,7 +14,7 @@ namespace ex_ui { namespace color { namespace rgb {
 	                  typedef CNamed_Enum TBase;
 	public:
 		enum _ids : uint32_t {
-			e__undef              ,
+			e__undef           = 0,
 			e_AliceBlue           , // [0xf0, 0xf8, 0xff] https://en.wikipedia.org/wiki/Alice_blue ;
 			e_AntiqueWhite        , // [0xfa, 0xeb, 0xd7] https://en.wikipedia.org/wiki/Shades_of_white#Antique_white ;
 			e_Aqua                , // [0x00, 0xff, 0xff] https://en.wikipedia.org/wiki/Aqua_(color) ;

@@ -92,8 +92,8 @@ namespace ex_ui { namespace color { namespace rgb {
 	static const
 	ex_ui::color::rgb::clr_value value_max = ((::std::numeric_limits<ex_ui::color::rgb::clr_value>::max)());
 
-	typedef uint32_t clr_type;   // a mix of primary colors, each of them has own color light intensity;
-	static const                 // maximum acceptable value of RGB color channels; channels mostly relate to composing of digital image;
+	typedef uint32_t clr_type;  // a mix of primary colors, each of them has own color light intensity;
+	static const                // maximum acceptable value of RGB color channels; channels mostly relate to composing of digital image;
 	ex_ui::color::rgb::clr_type clr_max = ((::std::numeric_limits<ex_ui::color::rgb::clr_type>::max)());
 	/*
 		https://stackoverflow.com/questions/2765164/inline-vs-inline-vs-inline-vs-forceinline ;
@@ -115,7 +115,7 @@ namespace ex_ui { namespace color { namespace rgb {
 
 	public:
 		clr_type Get (void) const ;
-		bool     Set (clr_type _type);       // returns true in case of changing the value of internal type;
+		bool     Set (clr_type _type); // returns true in case of changing the value of internal type;
 
 		bool EqualTo (const clr_type) const;
 

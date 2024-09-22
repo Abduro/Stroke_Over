@@ -5,11 +5,12 @@
 #include "color.shade.h"
 
 using namespace ex_ui::color::rgb;
+using namespace ex_ui::color::rgb::shade;
 
 /////////////////////////////////////////////////////////////////////////////
 
-CNamedShades:: CNamedShades (void) {}
-CNamedShades::~CNamedShades (void) {}
+CBlue:: CBlue (void) {}
+CBlue::~CBlue (void) {}
 
 /////////////////////////////////////////////////////////////////////////////
 

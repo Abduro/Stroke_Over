@@ -13,3 +13,11 @@ there is some trick preventing to start a work with new project files in VS code
 https://stackoverflow.com/questions/5809245/completely-remove-error-list-from-visual-studio ;
 https://stackoverflow.com/questions/2466286/vs2010-how-to-remove-hide-the-external-dependencies-folder-in-solution-explor ;
 https://stackoverflow.com/questions/7883966/disabling-highlighting-of-current-line-in-visual-studio  ;
+
+*important*
+in case when a reference path to external project is changed, reloading the project, for which the reference is changed, does not help to use that path in the code;
+because VS does not read new path or does not take it into account;
+
+unloading a solution and VS itself does not help too;
+the only step to fix it is:
+	deleting the folder .vs;

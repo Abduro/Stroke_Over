@@ -13,10 +13,11 @@ __shared       : {00000C13-EEEE-BBBB-6667-000000000001}  [stroke_over prj >> con
 		ebo_test_$2$ : {00000C13-EEEE-BBBB-6667-00000006A201} >> shared com-base  ;
 		ebo_test_$3$ : {00000C13-EEEE-BBBB-6667-00000006A301} >> shared mem-base  ;
 draw libs:
-	color  : {00000C13-EEEE-BBBB-6667-000000000022} >> draw color lib;
+	color        : {00000C13-EEEE-BBBB-6667-000000000022} >> draw color lib;
+	gdi_plus     : {00000C13-EEEE-BBBB-6667-00000000000A} >> gdi+ render lib;
 	unit test(s) :
 		ebo_test_$4$ : {00000C13-EEEE-BBBB-6667-000000060022} >> draw color ;
-	
+		ebo_test_$5$ : {00000C13-EEEE-BBBB-6667-00000006000A} >> gdi+ render;
 
 _console       : {00000C13-EEEE-BBBB-6667-000000000020}  [stroke_over prj >> confirmed] !!; not created yet!
 	unit test(s) :
