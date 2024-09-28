@@ -7,16 +7,19 @@ The stroke_over solution explorer treeview:
 	[vsd]     : {00000C13-EEEE-BBBB-6667-D00000000003} << node of vsd documents;
 
 [@root]  : {00000C13-EEEE-BBBB-6667-100000000000} << root node of shell extension project(s);
-[ms.win] : {00000C13-EEEE-BBBB-6667-100000000001} << core and shared static lib projects ported from the Ebo_pack solution;
-	[_shared] : {00000C13-EEEE-BBBB-6667-100000000002} << node of the shared/common lib project;
-	[core]    : {00000C13-EEEE-BBBB-6667-100000000003} << node of core extensions' projects;
-	[uix]     : {00000C13-EEEE-BBBB-6667-100000000004} << node of user interface extended projects;
-		[draw]: {00000C13-EEEE-BBBB-6667-100000000005} << node of uix components' draw/render projects;
+	[shell]   : {00000C13-EEEE-BBBB-6667-100000000001} << this node is for nested projects which implement required interfaces of the shell API;
+	[components] : {00000C13-EEEE-BBBB-6667-100000000002} << the node for static libraries each of them implement particular interface of the shell;
 
-[test.cases]  : {00000C13-EEEE-BBBB-6667-200000000000} << the root of test cases' projects;
-	[_common] : {00000C13-EEEE-BBBB-6667-200000000001} << node of shared/common unit test lib;
-	[core]    : {00000C13-EEEE-BBBB-6667-200000000002} << node of core libs' unit test project set;
-	[uix]     : {00000C13-EEEE-BBBB-6667-200000000003} << node of user interface extended projects' unit tests;
-		[draw]: {00000C13-EEEE-BBBB-6667-200000000004} << node of uix draw/render projects' unit tests;
+[ms.win] : {00000C13-EEEE-BBBB-6667-200000000000} << core and shared static lib projects ported from the Ebo_pack solution;
+	[_shared] : {00000C13-EEEE-BBBB-6667-200000000001} << node of the shared/common lib project;
+	[core]    : {00000C13-EEEE-BBBB-6667-200000000002} << node of core extensions' projects;
+	[uix]     : {00000C13-EEEE-BBBB-6667-200000000003} << node of user interface extended projects;
+		[draw]: {00000C13-EEEE-BBBB-6667-200000000004} << node of uix components' draw/render projects;
 
-[test.console]: {00000C13-EEEE-BBBB-6667-300000000000} << the root node for test cases that are based on using console app;
+[test.cases]  : {00000C13-EEEE-BBBB-6667-300000000000} << the root of test cases' projects;
+	[_common] : {00000C13-EEEE-BBBB-6667-300000000001} << node of shared/common unit test lib;
+	[core]    : {00000C13-EEEE-BBBB-6667-300000000002} << node of core libs' unit test project set;
+	[uix]     : {00000C13-EEEE-BBBB-6667-300000000003} << node of user interface extended projects' unit tests;
+		[draw]: {00000C13-EEEE-BBBB-6667-300000000004} << node of uix draw/render projects' unit tests;
+
+[test.console]: {00000C13-EEEE-BBBB-6667-400000000000} << the root node for test cases that are based on using console app;

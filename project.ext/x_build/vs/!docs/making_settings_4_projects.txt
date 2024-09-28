@@ -21,3 +21,7 @@ because VS does not read new path or does not take it into account;
 unloading a solution and VS itself does not help too;
 the only step to fix it is:
 	deleting the folder .vs;
+
+SLN file manual edition:
+(1) it is impossible to separate GlobalSection(ProjectConfigurationPlatforms) = postSolution section to separate sections,
+    due to the last one is only taken into account by MS Build; postSolution & preSolution section value does not affect this behaviour;

@@ -15,5 +15,9 @@
     <ClCompile Include="$(_1)com.svc.props.cpp"><Filter>src</Filter></ClCompile>
     <ClInclude Include="$(_0)com.sec.base.h"><Filter>interface</Filter></ClInclude>
     <ClCompile Include="$(_1)com.sec.base.cpp"><Filter>src</Filter></ClCompile>
+    <ClInclude Include="$(_0)com.guid.h"><Filter>interface</Filter></ClInclude>
+    <ClCompile Include="$(_1)com.guid.cpp"><Filter>src</Filter></ClCompile>
+    <ClInclude Include="$(_0)com.unk.h"><Filter>interface</Filter></ClInclude>
+    <ClCompile Include="$(_1)com.unk.cpp"><Filter>src</Filter></ClCompile>
   </ItemGroup>
 </Project>

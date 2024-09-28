@@ -26,7 +26,7 @@
   </PropertyGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>$(EboProjectVersion)</VCProjectVersion>
-    <ProjectGuid>{00000C13-EEEE-BBBB-6667-00000000A201}</ProjectGuid>
+    <ProjectGuid>{00000C13-EEEE-BBBB-6667-00000000E000}</ProjectGuid>
     <RootNamespace>$(EboRootNamespace)</RootNamespace>
     <WindowsTargetPlatformVersion>$(EboWindowsTargetPlatformVersion)</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -36,8 +36,6 @@
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>$(EboPlatformTools)</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
-    <UseOfMfc>false</UseOfMfc>
-    <UseOfAtl>Static</UseOfAtl>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
@@ -45,16 +43,12 @@
     <PlatformToolset>$(EboPlatformTools)</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
-    <UseOfMfc>false</UseOfMfc>
-    <UseOfAtl>Static</UseOfAtl>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>$(EboPlatformTools)</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
-    <UseOfMfc>false</UseOfMfc>
-    <UseOfAtl>Static</UseOfAtl>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
@@ -62,8 +56,6 @@
     <PlatformToolset>$(EboPlatformTools)</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
-    <UseOfMfc>false</UseOfMfc>
-    <UseOfAtl>Static</UseOfAtl>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -72,24 +64,24 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="sys.com.core.inc.props" />
+    <Import Project="shell.core.inc.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="sys.com.core.inc.props" />
+    <Import Project="shell.core.inc.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="sys.com.core.inc.props" />
+    <Import Project="shell.core.inc.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="sys.com.core.inc.props" />
+    <Import Project="shell.core.inc.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <!--It is assumed the environment variables contain paths that end up with backslash;-->
-    <!--The user path depends on the location where the project file resides, it is advisable to have output folders outside the project;-->
+    <!--The user path depends on the location where the project file is located, it is advisable to have output folders outside the project;-->
     <OutPath Condition="'$(OutPath)'==''">$(ProjectDir)..\..\..\</OutPath>
     <IntPath Condition="'$(IntPath)'==''">$(ProjectDir)..\..\..\</IntPath>
     <OutPath Condition="'$(OutPath)'!=''">$(OutPath)stroke_over\</OutPath>
@@ -191,24 +183,22 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="$(_0)com.svc.base.h"/>
-    <ClCompile Include="$(_1)com.svc.base.cpp"/>
-    <ClInclude Include="$(_0)com.svc.props.h"/>
-    <ClCompile Include="$(_1)com.svc.props.cpp"/>
-    <ClInclude Include="$(_0)com.sec.base.h"/>
-    <ClCompile Include="$(_1)com.sec.base.cpp"/>
-    <ClInclude Include="$(_0)com.guid.h"/>
-    <ClCompile Include="$(_1)com.guid.cpp"/>
-    <ClInclude Include="$(_0)com.unk.h"/>
-    <ClCompile Include="$(_1)com.unk.cpp"/>
+  <ItemGroup>  <!--generic wrappers-->
+    <ClInclude Include="$(_0)shell.base.h"/>
+    <ClCompile Include="$(_1)shell.base.cpp"/>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="sys.shared_v15.vcxproj">
+    <ProjectReference Include="..\ms.win\sys.shared_v15.vcxproj">
       <Project>{00000C13-EEEE-BBBB-6667-000000000001}</Project>
     </ProjectReference>
-    <ProjectReference Include="sys.err.core_v15.vcxproj">
+    <ProjectReference Include="..\ms.win\sys.err.core_v15.vcxproj">
       <Project>{00000C13-EEEE-BBBB-6667-00000000A101}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\ms.win\sys.com.core_v15.vcxproj">
+      <Project>{00000C13-EEEE-BBBB-6667-00000000A201}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\ms.win\sys.mem.core_v15.vcxproj">
+      <Project>{00000C13-EEEE-BBBB-6667-00000000A301}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

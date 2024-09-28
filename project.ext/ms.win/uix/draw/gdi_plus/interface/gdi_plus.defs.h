@@ -50,6 +50,7 @@
 
 namespace ex_ui { namespace draw { namespace gdi_pls {
 
+	// https://learn.microsoft.com/en-us/windows/win32/api/_gdiplus/ >> complete API of GDI+;
 	typedef Gdiplus::Bitmap TBitmap;
 	typedef Gdiplus::Status TStatus;
 
@@ -59,8 +60,8 @@ namespace ex_ui { namespace draw { namespace gdi_pls {
 		what is your name? a shorter name...
 		Lilu... (c) 5th Element, (43:35);
 
-		ToDo::not sure the enumeration below would be useful; it requires a review;
-		The review is made: the enumeration below inherits the original gdi+ one, but can have additional elements for extending gdi+ status states;
+		ToDo: not sure the enumeration below would be useful; it requires a review;
+		The review : the enumeration below inherits the original gdi+ one, but can have additional elements for extending gdi+ status states;
 	*/
 	enum  e_status : uint32_t {
 		e_no_err      = t_stat::Ok                       ,
@@ -93,7 +94,7 @@ namespace ex_ui { namespace draw { namespace gdi_pls {
 		that are partially somehow related to WinAPI but in the most cases they aren't;
 
 		the main purpose of the GDI+ error adapter is to expose some description of the error state of the library;
-		such approach does not require an inheritance from shared::sys_core::CError; 
+		such approach does not require an inheritance from shared::sys_core::CError;
 	*/
 	// ToDo: this class and the adapter of sys error use different enums, must be re-viewed;
 	class CErr_Assoc {

@@ -21,6 +21,21 @@
 namespace ex_ui { namespace draw { namespace gdi_pls {
 
 	using TErr_ref = const CErr_Adapter&;
+	/*
+		to start:
+		// https://learn.microsoft.com/en-us/windows/win32/api/gdiplusinit/nf-gdiplusinit-gdiplusstartup      >> inits gdi+ module for a process;
+		// https://learn.microsoft.com/en-us/windows/win32/api/gdiplusinit/ns-gdiplusinit-gdiplusstartupinput >> input args for startup func;
+		to debug:
+		// https://learn.microsoft.com/en-us/windows/win32/api/gdiplusinit/nc-gdiplusinit-debugeventproc      >> callback for getting/setting debug info;
+		// https://learn.microsoft.com/en-us/windows/win32/api/gdiplusinit/ne-gdiplusinit-debugeventlevel     >> debug level enumeration;
+		to hook :
+		// https://learn.microsoft.com/en-us/windows/win32/api/gdiplusinit/ns-gdiplusinit-gdiplusstartupoutput   >> for setting hook func pointers;
+		// https://learn.microsoft.com/en-us/windows/win32/api/gdiplusinit/nc-gdiplusinit-notificationhookproc   >> for starting a hook procedure;
+		// https://learn.microsoft.com/en-us/windows/win32/api/gdiplusinit/nc-gdiplusinit-notificationunhookproc >> for ending a hook procedure;
+		// 
+		to stop :
+		// https://learn.microsoft.com/en-us/windows/win32/api/gdiplusinit/nf-gdiplusinit-gdiplusshutdown     >> how to unload the gdi+ module;
+	*/
 
 	class CGuard {
 	public:

@@ -1,0 +1,11 @@
+; https://learn.microsoft.com/en-us/cpp/build/reference/module-definition-dot-def-files ;
+; https://learn.microsoft.com/en-us/cpp/build/reference/rules-for-module-definition-statements ;
+; https://learn.microsoft.com/en-us/cpp/build/reference/library ;
+
+LIBRARY      "shell.thumb_v15.dll"
+
+EXPORTS
+	DllGetClassObject   PRIVATE
+	DllCanUnloadNow     PRIVATE
+	DllRegisterServer   PRIVATE
+	DllUnregisterServer PRIVATE

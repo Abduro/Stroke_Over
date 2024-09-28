@@ -20,6 +20,9 @@
 #define __e_invalid_arg E_INVALIDARG
 #define __e_inv_arg   __e_invalid_arg
 #endif
+#ifndef __e_no_iface
+#define __e_no_iface E_NOINTERFACE
+#endif
 #ifndef __e_no_memory
 #define __e_no_memory E_OUTOFMEMORY
 #endif
@@ -28,6 +31,9 @@
 #endif
 #ifndef __e_not_inited
 #define __e_not_inited OLE_E_BLANK
+#endif
+#ifndef __e_pointer
+#define __e_pointer E_POINTER
 #endif
 
 #pragma endregion

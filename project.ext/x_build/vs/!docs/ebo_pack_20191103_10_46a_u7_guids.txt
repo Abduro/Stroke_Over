@@ -23,6 +23,17 @@ _console       : {00000C13-EEEE-BBBB-6667-000000000020}  [stroke_over prj >> con
 	unit test(s) :
 		ebo_test_con : {00000C13-EEEE-BBBB-6667-000000060020} >> shared/common exe;
 
+shell:
+	shell.core : {00000C13-EEEE-BBBB-6667-00000000E000} >> shell initialize & context menu core lib;
+	shell.thumb: {00000C13-EEEE-BBBB-6667-00000000E001} >> windows file explorer file icon thumb project;
+	unit test(s) :
+		ebo_test_$6$ : {00000C13-EEEE-BBBB-6667-00000006E000} >> shell core lib unit tests;
+
+
+
+Not used yet
+-----------------------------------------------------------------------------
+
 _crypto        : {00000C13-EEEE-BBBB-6667-000000000002}
 _log           : {00000C13-EEEE-BBBB-6667-000000000003}
 _net           : {00000C13-EEEE-BBBB-6667-000000000004}
@@ -31,7 +42,6 @@ _registry      : {00000C13-EEEE-BBBB-6667-000000000006}
 _runnable      : {00000C13-EEEE-BBBB-6667-000000000007}
 _user.32       : {00000C13-EEEE-BBBB-6667-000000000008}
 _xml           : {00000C13-EEEE-BBBB-6667-000000000009}
-_uix.draw      : {00000C13-EEEE-BBBB-6667-00000000000A}
 _uix.ctrl      : {00000C13-EEEE-BBBB-6667-00000000000B}
 _uix.form      : {00000C13-EEEE-BBBB-6667-00000000000C}
 _wmi.service   : {00000C13-EEEE-BBBB-6667-00000000000D}

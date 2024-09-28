@@ -2,7 +2,7 @@
 #define _COMSECBASE_H_INCLUDED
 /*
 	Cretaed by Tech_dog (ebontrop@gmail.com) on 17-Aug-2024 at 19:20:38.1648420, UTC+7, Novosibirsk, Saturday;
-	This is Stroke Over project windows COM service security base level wrapper interface declaration file;
+	This is Ebo Pack project comp-obj-model service security base level wrapper interface declaration file;
 */
 #include <objbase.h>
 #include "com.svc.base.h" // possibly is useless reference for the time being;

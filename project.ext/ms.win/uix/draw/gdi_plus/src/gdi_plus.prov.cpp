@@ -55,7 +55,14 @@ err_code CGuard::Capture (void) {
 		this->m_err_ada  = TErrAdapt_enum::Ref().Get(e_status::e_inited/*t_stat::WrongState*/);
 		return (n_result = TErrCodes::eObject::eInited);
 	}
+
 	// https://learn.microsoft.com/en-us/windows/win32/api/gdiplusinit/nf-gdiplusinit-gdiplusstartup ;
+	// https://learn.microsoft.com/en-us/windows/win32/api/gdiplusinit/ns-gdiplusinit-gdiplusstartupinput ;
+
+	// https://learn.microsoft.com/en-us/windows/win32/api/gdiplusinit/nc-gdiplusinit-debugeventproc ;
+	// https://learn.microsoft.com/en-us/windows/win32/api/gdiplusinit/ne-gdiplusinit-debugeventlevel ;
+
+	// https://learn.microsoft.com/en-us/windows/win32/api/gdiplusinit/ns-gdiplusinit-gdiplusstartupoutput ;
 
 	Gdiplus::GdiplusStartupInput input_ = {0};
 	this->m_err_ada = TErrAdapt_enum::Ref().Get(Gdiplus::GdiplusStartup(&get_token(), &input_, 0));
